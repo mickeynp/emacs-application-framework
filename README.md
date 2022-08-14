@@ -72,6 +72,13 @@ git clone --depth=1 -b master https://github.com/emacs-eaf/emacs-application-fra
 
 #### 2. Install/Update EAF applications and dependencies
 
+EAF requires Python 3 and ``pip``. Make sure you *deactivate* your Python virtual environment before installing. EAF must install packages with ``pip`` to function. It uses the ``-user`` flag so the packages are local to your user account. 
+
+If you are installing EAF from inside Emacs then you must ensure you deactivate your virtual environment in Emacs (if you use a package to handle this), as it may interfere with the setup process.
+
+If you want EAF to install into a virtual environment, then you must configure a suitable virtual environment *and* customize the variable ``eaf-python-command``. 
+
+
 You can use `M-x eaf-install-and-update` or manually run the `install-eaf.py` script in the EAF directory:
 
 ```Bash
